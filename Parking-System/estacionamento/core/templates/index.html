@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento - Início</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 220px;
+            margin: 10px auto;
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .card p {
+            font-size: 14px;
+            color: #777;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo ao Estacionamento</h1>
+    
+    <div class="row justify-content-center">
+        <!-- Botão Registrar Entrada -->
+        <div class="col-md-3">
+            <div class="card">
+                <a href="{% url 'entrada' %}" class="btn btn-outline-secondary">Registrar Entrada</a>
+                <p>Adicione um novo veículo</p>
+            </div>
+        </div>
+
+        <!-- Botão Lista de Carros Estacionados / Registrar Saída -->
+        <div class="col-md-3">
+            <div class="card">
+                <a href="{% url 'home' %}" class="btn btn-outline-secondary">Lista de Carros Estacionados / Registrar Saída</a>
+                <p>Verificar carros e registrar saída</p>
+            </div>
+        </div>
+
+        <!-- Botão Dashboard -->
+        <div class="col-md-3">
+            <div class="card">
+                <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary">Dashboard</a>
+                <p>Veja o resumo estatístico do estacionamento</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
